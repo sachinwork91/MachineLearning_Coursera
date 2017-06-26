@@ -133,7 +133,7 @@ J=J + Total_reg;
 %               over the training examples if you are implementing it for the 
 %               first time.
 %
-% Set all the D to zeros
+
 
     %Theta1_grad=0;
 	%Theta2_grad=0;
@@ -151,15 +151,10 @@ triangular_delta1=triangular_delta1+delta_2k'*A1;%(delta_2k'=>26*5000 and A1=>50
  
  
 triangular_delta2=triangular_delta2+delta_3k'*A2; % delta_3k'=>10X5000 and A2=>5000*26
-fprintf('Size of triangular_delta1')
-size(triangular_delta1)
-fprintf('Size of triangular_delta2')
-size(triangular_delta2)
+
 
 Theta1_grad=(1/m)*triangular_delta1;
 Theta2_grad=(1/m)*triangular_delta2;
-
-
 
 
 % Part 3: Implement regularization with the cost function and gradients.
